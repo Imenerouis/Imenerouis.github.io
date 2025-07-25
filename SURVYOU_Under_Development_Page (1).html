@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SURVYOU | Data Revolution</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #050c33;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: #1bd6a0;
+    }
+
+    #typing {
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      min-height: 50px;
+    }
+
+    .description {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: white;
+      color: #050c33;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1bd6a0;
+      color: white;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>SURVYOU</h1>
+  <div id="typing"></div>
+
+  <p class="description">
+    We are a US-based company offering professional services in data collection and analysis.
+    We work with companies and researchers worldwide to transform their challenges into innovative solutions through data.
+    The platform is under development and currently being tested.
+  </p>
+
+  <button onclick="subscribe()">Stay Updated</button>
+
+  <footer>© 2025 SURVYOU Inc. | All rights reserved</footer>
+
+  <script>
+    // Welcome Message
+    window.onload = function () {
+      alert("🎉 Welcome to SURVYOU! We're building something amazing.");
+      typeEffect(); // Start typing effect
+    };
+
+    // Typing Effect
+    const text = "Revolutionizing Data Through Your Voice!";
+    let index = 0;
+
+    function typeEffect() {
+      if (index < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 50);
+      }
+    }
+
+    // Email Subscription
+    function subscribe() {
+      let email = prompt("Enter your email to stay updated:");
+      if (email) {
+        alert("Thank you! We'll keep you updated.");
+      }
+    }
+  </script>
+</body>
+</html>
